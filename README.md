@@ -1,28 +1,20 @@
-# Eventide::Rails
-Short description and motivation.
+# Eventide::Rails Experiments
 
-## Usage
-How to use my plugin.
+Demonstrate loading the message_store schema into an existing Rails database.
 
-## Installation
-Add this line to your application's Gemfile:
+- bundle install in the repo root
 
-```ruby
-gem 'eventide-rails'
+```
+cd test/example-host
+# may need to bundle install here as well
+rails db:create
+rails generate eventide:install
+rails db:migrate
 ```
 
-And then execute:
-```bash
-$ bundle
+Verify the eventide functionality works from the rails db user:
+(modify `DATABASE_USER` value as needed to match your rails db user)
+
 ```
-
-Or install it yourself as:
-```bash
-$ gem install eventide-rails
+DATABASE_NAME=example_host_development DATABASE_USER=josh $(bundle show message-db)/database/write-test-message.sh
 ```
-
-## Contributing
-Contribution directions go here.
-
-## License
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
