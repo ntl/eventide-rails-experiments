@@ -1,0 +1,5 @@
+.bundle/
+log/*.log
+pkg/
+test/example-host/log/*.log
+test/example-host/tmp/
