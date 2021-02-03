@@ -3,3 +3,6 @@ log/*.log
 pkg/
 test/example-host/log/*.log
 test/example-host/tmp/
+test/example-host/db
+/gems
+/Gemfile.lock

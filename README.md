@@ -5,11 +5,11 @@ Demonstrate loading the message_store schema into an existing Rails database.
 - bundle install in the repo root
 
 ```
-cd test/example-host
-# may need to bundle install here as well
-rails db:create
-rails generate eventide:install
-rails db:migrate
+pushd test/example-host
+
+bin/rails db:create
+bin/rails generate eventide:install
+bin/rails db:migrate
 ```
 
 Verify the eventide functionality works from the rails db user:
